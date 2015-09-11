@@ -1,0 +1,22 @@
+html, body, h1, h2, h3, h4, h5, p {
+	margin: 0;
+	padding: 0;
+}
+
+/*@import url(https://fonts.googleapis.com/css?family=Fredoka+One);*/
+
+.myname {
+	margin-top: 50px;
+	text-align: center;
+	font-family: 'Fredoka One';
+	color: #992e4e;
+	
+	font-size: 50px;
+	text-shadow: 
+	1px 1px #ff6666,
+	2px 2px 1px #000000,
+	-1px 0 0 #660000; 
+ 	letter-spacing: 5px;
+	line-height: 80px;
+
+}
