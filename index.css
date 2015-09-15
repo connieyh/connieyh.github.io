@@ -105,8 +105,9 @@ main {
 	/*display: block;*/
 	overflow:auto; 
 	padding:120px 0;
-	background: linear-gradient(185deg, silver, gray, black);
-	
+	/*background: linear-gradient(185deg, silver, gray, black);*/
+	background-color: #000;
+
 	
 }
 
