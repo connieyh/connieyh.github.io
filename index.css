@@ -87,7 +87,7 @@ header {
 .myname {
 	margin-top: 10px;
 	text-align: center;
-	font-family: 'Just Another Hand', cursive, 'Fredoka One';
+	font-family: 'Bangers', cursive, 'Just Another Hand', cursive, 'Fredoka One';
 	color: #b30000;
 	
 	font-size: 50px;
@@ -217,16 +217,32 @@ main {
 /* card text */
 .card__text {
   display: inline-block;
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  height: 20px;
+  /*height: 20px;*/
   color: #fff;
-  font-family: "Comic Sans MS", cursive, sans-serif, "Roboto Slab", serif;
-  line-height: 20px;
+  font-family: 'Just Another Hand', cursive, "Comic Sans MS", cursive, sans-serif, "Roboto Slab", serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.card__text a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.card__text a:hover {
+	-webkit-stroke-width: 6.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 2px 0px 20px yellow;
 }
 
 /* click effect */
