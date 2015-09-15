@@ -1,15 +1,94 @@
-html, body, h1, h2, h3, h4, h5, p {
-	margin: 0;
-	padding: 0;
+/* ===================================================
+RESET
+======================================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-/*@import url(https://fonts.googleapis.com/css?family=Fredoka+One);*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ========================================================
+  BOX SIZING & CLEARFIX
+==========================================================*/
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ==========================================================
+  LAYOUT
+=============================================================*/
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 15%;
+	top: 0;
+	/*left: 0;*/
+	/*background-color: white;*/
+	z-index: 999;
+	background: -webkit-linear-gradient(#ffd27f, #ffffb2, #fff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffd27f, #ffffb2, #fff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffd27f,#ffffb2, #fff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffd27f, #ffffb2, #fff); /* Standard syntax (must be last) */
+}
 .myname {
-	margin-top: 50px;
+	margin-top: 10px;
 	text-align: center;
-	font-family: 'Fredoka One';
-	color: #992e4e;
+	font-family: 'Just Another Hand', cursive, 'Fredoka One';
+	color: #b30000;
 	
 	font-size: 50px;
 	text-shadow: 
@@ -20,3 +99,174 @@ html, body, h1, h2, h3, h4, h5, p {
 	line-height: 80px;
 
 }
+
+main { 
+	/*margin: 0 auto; */
+	/*display: block;*/
+	overflow:auto; 
+	padding:120px 0;
+	background: linear-gradient(185deg, silver, gray, black);
+	
+	
+}
+
+/* ==========================================================
+  CARDS
+=============================================================*/
+
+.cardgroup {
+	margin-top: 60px;
+	margin-left: 70px;
+}
+
+.card {
+  position: relative;
+  float: left;
+  padding-bottom: 25%;
+  width: 23%;
+  text-align: center;
+  /*display: inline-block;*/
+}
+
+.card:nth-child(1) {
+  margin-left: -3px;
+  margin-right: 10px;
+}
+
+.card:nth-child(2),
+.card:nth-child(3) {
+  margin-right: 10px;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.card__front,
+.card__back {
+
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+  background-color: #ff5078;
+  /*background-color: #1189d1;*/
+}
+
+.card__back {
+  background-color: #1e1e1e;
+  border: 1px solid;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+
+}
+
+.educationcard_front {
+	background-color: #1189d1;	
+}
+
+.educationcard_back {
+	background-color: #052c44;
+	border-color: #86cbf5;
+}
+
+.interncard_front {
+	background-color: #18b755;
+}
+
+.interncard_back {
+	background-color: #063016;
+	border-color: #7aeea7;
+}
+
+.projectcard_front {
+	background-color: #f3b50b;
+}
+
+.projectcard_back {
+	background-color: #614804;
+	border-color: #fbe19c;
+}
+
+.aboutmecard_front {
+	background-color: #ef4809;
+}
+
+.aboutmecard_back {
+	background-color: #5c1c03;
+	border-color: #fbb296;
+}
+
+
+
+/* card text */
+.card__text {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 20px;
+  color: #fff;
+  font-family: "Comic Sans MS", cursive, sans-serif, "Roboto Slab", serif;
+  line-height: 20px;
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+footer {
+	position: fixed;
+	background: ;
+	bottom: 0;
+	width: 100%;
+	height: 15%;
+	
+    background: -webkit-linear-gradient(#fff, #ffffb2, #ffd27f); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #ffffb2, #ffd27f); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff,#ffffb2, #ffd27f); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #ffffb2, #ffd27f); /* Standard syntax (must be last) */
+}
+
+.footercontent {
+	/*position: relative;*/
+	display: block;
+	text-align: center;
+	transform: translateY(50%);
+}
+
+.footercontent img {
+	display: inline;
+	width: 5%;
+	height: 5%;
+	/*top: 50%;*/
+}
+
+
+
+
