@@ -1,0 +1,479 @@
+/* ===================================================
+RESET
+======================================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*font-size: 100%;*/
+  font: inherit;
+  /*vertical-align: baseline;*/
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  /*line-height: 1;*/
+  /*background-color: #fff;*/
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ========================================================
+  BOX SIZING & CLEARFIX
+==========================================================*/
+/**,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
+/* ==========================================================
+  HEADERS
+=============================================================*/
+.title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Gotham', sans-serif, 'Courier New';
+}
+
+.title .name {
+  font-size: 36px;
+}
+.title .role {
+  margin-left: 3px;
+}
+
+.social {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.social img {
+  height: 8%;
+  width: 8%;
+  display: inline;
+  margin-right: 10px;
+}
+
+.social .githubcat {
+  margin-top: 3px;
+}
+
+
+/*.myname {
+	margin-top: 10px;
+	text-align: center;
+	font-family: 'Bangers', cursive, 'Just Another Hand', cursive, 'Fredoka One';
+	color: #b30000;
+	
+	font-size: 50px;
+	text-shadow: 
+	1px 1px #ff6666,
+	2px 2px 1px #000000,
+	-1px 0 0 #660000; 
+ 	letter-spacing: 5px;
+	line-height: 80px;
+
+}*/
+
+/* ==========================================================
+  CARDS
+=============================================================*/
+
+/*.main:hover {
+  cursor: pointer;
+}*/
+
+/*Center absolute positioning*/
+.main {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+/*Front & Back could match each other at same position this way*/
+.inner-front,
+.inner-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: "Gotham";
+}
+
+.card1-front {
+  background-color: #ED6A5A;
+}
+
+.card1-back {
+  background-color: #A1CF6B;
+}
+
+.card2-front{
+  background-color: #F4F1BB;
+}
+
+.card2-back {
+  background-color: #E4C1F9;
+}
+
+.card3-front{
+  background-color: #9BC1BC;
+}
+
+.card3-back {
+  background-color: #F694C1;
+}
+
+.card4-front {
+  background-color: #E6EBE0;
+}
+
+.card4-back {
+  background-color: #A9DEF9;
+}
+
+
+.inner-front,
+.inner-back {
+  -webkit-backface-visibility: hidden;
+         -backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.inner-back {
+  /*background-color: #FE938C;*/
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.inner.flipped .inner-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.inner.flipped .inner-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+/* ==========================================================
+  CARD CONTENT (Mainly Card-front Content)
+=============================================================*/
+
+.inner-content-front, 
+.inner-content-back {
+  padding: 10px 10px 10px 10px; 
+  line-height: 26px;
+}
+
+.inner-content-front,
+.inner-content-back {
+  position: absolute;
+  margin-top: 40px;
+  
+}
+
+.clickme {
+  font-size: 14px;
+  padding-left: 10px;
+  line-height: 26px;
+}
+
+.icon-word {
+  display: inline;
+}
+
+.glyphicon-envelope:hover {
+  cursor: pointer;
+}
+.glyphicon-envelope {
+  padding-left: 10px;
+  font-size: 48px;
+}
+
+.bounce {
+  -webkit-animation: bounce 1.5s infinite;
+    animation: bounce 1.5s infinite;
+}
+
+/* Scroll down indicator (bouncing) */
+/*@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); 
+  }
+  40% {
+    -webkit-transform: translateY(-30px); 
+  }
+  60% {
+    -webkit-transform: translateY(-15px); 
+  } 
+}*/
+
+/*@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); 
+  }
+  40% {
+    -moz-transform: translateY(-30px); 
+  }
+  60% {
+    -moz-transform: translateY(-15px); 
+  } 
+}*/
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); 
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px); 
+  }
+  60% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+  }
+}
+
+#message-content {
+  display: none;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.card-button-in,
+.card-button-out {
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateY(50%);
+  display: none;
+}
+
+.card-button-in {
+
+}
+
+.card-button-in:hover, 
+.card-button-out:hover {
+  cursor: pointer;
+}
+
+
+.card {
+  /*position: relative;*/
+  /*float: left;*/
+  /*padding-bottom: 100%;*/
+  /*width: 100%;*/
+  /*height: 200px;*/
+
+  /*height: 200px;*/
+  /*width: 200px;*/
+  /*text-align: center;*/
+  /*display: inline-block;*/
+}
+
+
+
+/*.card:nth-child(1) {
+  margin-left: -3px;
+  margin-right: 10px;
+}
+
+.card:nth-child(2),
+.card:nth-child(3) {
+  margin-right: 10px;
+}*/
+
+
+
+/* card fronts and backs */
+.card__front,
+.card__back {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*width: 200px;*/
+  /*height: 200px;*/
+
+  border-radius: 10px;
+}
+
+.card__front,
+.card__back {
+
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.card__front {
+  background-color: #ff5078;
+  /*background-color: #1189d1;*/
+}
+
+.card__back {
+  background-color: #1e1e1e;
+  border: 1px solid;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+
+}
+
+
+
+
+/* card text */
+.card__text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  /*height: 20px;*/
+  color: #fff;
+  font-family: 'Just Another Hand', cursive, "Comic Sans MS", cursive, sans-serif, "Roboto Slab", serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.card__text a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.card__text a:hover {
+	-webkit-stroke-width: 6.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 2px 0px 20px yellow;
+}
+
+/* click effect */
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+footer {
+	position: fixed;
+	background-color: #f5a623;
+	bottom: 0;
+	width: 100%;
+	height: 5%;
+	
+    /*background: -webkit-linear-gradient(#fff, #ffffb2, #ffd27f); */
+                /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(#fff, #ffffb2, #ffd27f); */
+                /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(#fff,#ffffb2, #ffd27f); */
+                /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(#fff, #ffffb2, #ffd27f); */
+                /* Standard syntax (must be last) */
+}
+
+.footercontent {
+	/*position: relative;*/
+	/*display: block;*/
+	text-align: center;
+	transform: translateY(50%);
+}
+
+.footercontent img {
+	display: inline;
+	width: 5%;
+	height: 5%;
+	/*top: 50%;*/
+}
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+
+
+
