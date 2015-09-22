@@ -240,29 +240,33 @@ table {
 }
 
 /* Scroll down indicator (bouncing) */
-/*@keyframes bounce {
+/**
+*
+*  Bouncing Effect
+*/
+@keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0); 
   }
   40% {
-    -webkit-transform: translateY(-30px); 
+    -webkit-transform: translateY(-15px); 
   }
   60% {
-    -webkit-transform: translateY(-15px); 
+    -webkit-transform: translateY(-10px); 
   } 
-}*/
+}
 
-/*@-moz-keyframes bounce {
+@-moz-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0); 
   }
   40% {
-    -moz-transform: translateY(-30px); 
+    -moz-transform: translateY(-15px); 
   }
   60% {
-    -moz-transform: translateY(-15px); 
+    -moz-transform: translateY(-10px); 
   } 
-}*/
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -291,6 +295,10 @@ table {
   display: none;
   padding-left: 10px;
   padding-right: 20px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
 }
 
 .card-button-in,
@@ -300,6 +308,7 @@ table {
   top: 50%;
   left: 40%;
   transform: translateY(50%);
+  opacity: 0.5;
   display: none;
 }
 
@@ -310,6 +319,7 @@ table {
 .card-button-in:hover, 
 .card-button-out:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 
